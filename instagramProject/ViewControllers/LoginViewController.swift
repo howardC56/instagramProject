@@ -10,10 +10,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    let loginView = loginView()
+    let logView = LoginView()
     
-    override loadView() {
-        view = loginView
+    override func loadView() {
+        view = logView
     }
     
     override func viewDidLoad() {

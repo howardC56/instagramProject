@@ -16,6 +16,8 @@ class LoginView: UIView {
         tf.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tf.font = UIFont(name: "AvenirNext-Regular", size: 15)
         tf.layer.cornerRadius = 15
+        tf.layer.borderWidth = 1
+        tf.layer.borderColor = UIColor.black.cgColor
         tf.backgroundColor = .systemBackground
         tf.placeholder = "  Enter Email Here"
         tf.textContentType = .emailAddress
@@ -30,6 +32,8 @@ class LoginView: UIView {
         tf.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tf.font = UIFont(name: "AvenirNext-Regular", size: 15)
         tf.layer.cornerRadius = 15
+        tf.layer.borderWidth = 1
+        tf.layer.borderColor = UIColor.black.cgColor
         tf.backgroundColor = .systemBackground
         tf.placeholder = "  Enter Password Here"
         tf.textContentType = .password
@@ -42,29 +46,61 @@ class LoginView: UIView {
     private lazy var profileImage: UIImageView = {
            let image = UIImageView()
            image.clipsToBounds = true
-           image.contentMode = .scaleAspectFill
+           image.contentMode = .scaleAspectFit
            image.image = UIImage(systemName: "person")
-           image.layer.cornerRadius = 25
+           image.layer.cornerRadius = 20
            return image
        }()
     
+    private lazy var errorLabel: UILabel = {
+           let label = UILabel()
+           label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+           label.textColor = .red
+        label.adjustsFontSizeToFitWidth = true
+           label.backgroundColor = .white
+           label.numberOfLines = 0
+           return label
+       }()
+    
     public lazy var signUpButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 350, y: 520, width: 50, height: 50))
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 300, height: 50))
         button.setTitle("Sign Up", for: .normal)
         button.layer.cornerRadius = 15
         button.layer.masksToBounds = false
         button.tintColor = .black
         button.backgroundColor = .green
-        button.layer.shadowColor = UIColor.lightGray.cgColor
-        button.layer.shadowPath = UIBezierPath(roundedRect: button.bounds, cornerRadius: 15).cgPath
-        button.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-        button.layer.shadowOpacity = 0.7
+        button.layer.shadowColor = UIColor.darkGray.cgColor
+        button.layer.shadowPath = UIBezierPath(rect: button.bounds).cgPath
+        button.layer.shadowOffset = .zero
+        button.layer.shadowOpacity = 0.5
         button.layer.shadowRadius = 5
-        button.layer.borderColor = UIColor.clear.cgColor
-        button.layer.borderWidth = 1.5
-        button.layer.masksToBounds = true
+        button.layer.masksToBounds = false
         button.clipsToBounds = false
         button.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 15)
+        return button
+    }()
+    
+    private lazy var loginLabel: UILabel = {
+           let label = UILabel()
+           label.text = "If you have an Account --> "
+           label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+           label.textColor = .black
+           label.backgroundColor = .white
+           label.numberOfLines = 0
+           return label
+       }()
+    
+    public lazy var accountStateButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 350, y: 520, width: 50, height: 50))
+        button.setTitle("Login", for: .normal)
+        button.layer.cornerRadius = 15
+        button.layer.masksToBounds = false
+        button.tintColor = .blue
+        button.setTitleColor(.blue, for: .normal)
+        button.backgroundColor = .clear
+        button.layer.borderColor = UIColor.clear.cgColor
+        button.layer.borderWidth = 1.5
+        button.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 17)
         return button
     }()
     
@@ -78,30 +114,51 @@ class LoginView: UIView {
     }
     
     private func commonInit() {
+        backgroundColor = .white
         profileImageConstraint()
         emailTextFieldConstraint()
         passwordFieldConstraint()
+        errorLabelConstraints()
         signUpButtonConstraint()
+        loginLabelConstraints()
+        accountStateButtonConstraints()
+        signUpButton.layer.shadowPath = UIBezierPath(roundedRect: signUpButton.bounds, cornerRadius: 15).cgPath
     }
     
     private func profileImageConstraint() {
         addSubview(profileImage)
         profileImage.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([profileImage.centerYAnchor.constraint(equalTo: centerYAnchor), profileImage.widthAnchor.constraint(equalToConstant: 100), profileImage.heightAnchor.constraint(equalToConstant: 100), profileImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 100)])
+        NSLayoutConstraint.activate([profileImage.centerXAnchor.constraint(equalTo: centerXAnchor), profileImage.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.25), profileImage.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.25), profileImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50)])
     }
     
     private func emailTextFieldConstraint() {
         addSubview(emailTextField)
-        emailTextField.anchor(top: profileImage.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 30, paddingLeft: 20, paddingRight: 20)
+        emailTextField.anchor(top: profileImage.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 30, paddingLeft: 20, paddingRight: 20, height: 50)
     }
     
     private func passwordFieldConstraint() {
         addSubview(passwordTextField)
-        passwordTextField.anchor(top: emailTextField.bottomAnchor, left: emailTextField.leftAnchor, right: emailTextField.rightAnchor)
+        passwordTextField.anchor(top: emailTextField.bottomAnchor, left: emailTextField.leftAnchor, right: emailTextField.rightAnchor, paddingTop: 15, height: 50)
+    }
+    
+    private func errorLabelConstraints() {
+        addSubview(errorLabel)
+        errorLabel.anchor(top: passwordTextField.bottomAnchor, left: emailTextField.leftAnchor, right: emailTextField.rightAnchor, paddingTop: 15, height: 50)
     }
     
     private func signUpButtonConstraint() {
         addSubview(signUpButton)
-        NSLayoutConstraint.activate([signUpButton.centerYAnchor.constraint(equalTo: centerYAnchor), signUpButton.widthAnchor.constraint(equalToConstant: 100), signUpButton.heightAnchor.constraint(equalToConstant: 75), signUpButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 50)])
+        signUpButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([signUpButton.centerXAnchor.constraint(equalTo: centerXAnchor), signUpButton.widthAnchor.constraint(equalToConstant: 300), signUpButton.heightAnchor.constraint(equalToConstant: 50), signUpButton.topAnchor.constraint(equalTo: errorLabel.bottomAnchor, constant: 20)])
+    }
+    
+    private func loginLabelConstraints() {
+        addSubview(loginLabel)
+        loginLabel.anchor(top: signUpButton.bottomAnchor, left: emailTextField.leftAnchor, paddingTop: 20, paddingLeft: 50)
+    }
+    
+    private func accountStateButtonConstraints() {
+    addSubview(accountStateButton)
+        accountStateButton.anchor(top: loginLabel.topAnchor, left: loginLabel.rightAnchor, paddingLeft: 10, width: 50, height: 22)
     }
 }
