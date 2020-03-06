@@ -10,8 +10,15 @@ import UIKit
 
 class FeedViewController: UIViewController {
 
+    let tableView = FeedView()
+    
+    override func loadView() {
+        view = tableView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Activity Feed"
 
         // Do any additional setup after loading the view.
     }

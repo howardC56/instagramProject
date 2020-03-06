@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		884541C624120BFE00C47821 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884541C524120BFE00C47821 /* AuthenticationService.swift */; };
 		884541C82412107B00C47821 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884541C72412107B00C47821 /* MainTabBarController.swift */; };
+		884541CE24121B2700C47821 /* FeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884541CD24121B2700C47821 /* FeedViewCell.swift */; };
 		8847F06524119B8F00A23983 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847F06424119B8F00A23983 /* AppDelegate.swift */; };
 		8847F06724119B8F00A23983 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847F06624119B8F00A23983 /* SceneDelegate.swift */; };
 		8847F06E24119B9100A23983 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8847F06D24119B9100A23983 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		709680873E32BFA55C183AC2 /* Pods_instagramProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagramProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		884541C524120BFE00C47821 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		884541C72412107B00C47821 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		884541CD24121B2700C47821 /* FeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewCell.swift; sourceTree = "<group>"; };
 		8847F06124119B8E00A23983 /* instagramProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagramProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8847F06424119B8F00A23983 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8847F06624119B8F00A23983 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		884541CA241219B200C47821 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				884541CD24121B2700C47821 /* FeedViewCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				884541C82412107B00C47821 /* MainTabBarController.swift in Sources */,
 				8847F0892411A24000A23983 /* ProfileView.swift in Sources */,
 				884541C624120BFE00C47821 /* AuthenticationService.swift in Sources */,
+				884541CE24121B2700C47821 /* FeedViewCell.swift in Sources */,
 				8847F06724119B8F00A23983 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

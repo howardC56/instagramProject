@@ -9,6 +9,13 @@
 import UIKit
 
 class FeedView: UIView {
+    
+    lazy var tableView: UITableView = {
+        let tableV = UITableView()
+        tableV.rowHeight = 100
+        tableV.backgroundColor = .white
+        return tableV
+    }()
 
     override init(frame:CGRect) {
         super.init(frame: UIScreen.main.bounds)
@@ -20,7 +27,13 @@ class FeedView: UIView {
     }
     
     private func commonInit() {
-        
+        tableViewConstraints()
+        tableView.register(FeedViewCell.self, forCellReuseIdentifier: "FeedViewCell")
     }
+    
+    private func tableViewConstraints() {
+           addSubview(tableView)
+        tableView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor)
+       }
 
 }
