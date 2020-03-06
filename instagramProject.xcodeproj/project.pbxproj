@@ -10,6 +10,9 @@
 		884541C624120BFE00C47821 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884541C524120BFE00C47821 /* AuthenticationService.swift */; };
 		884541C82412107B00C47821 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884541C72412107B00C47821 /* MainTabBarController.swift */; };
 		884541CE24121B2700C47821 /* FeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884541CD24121B2700C47821 /* FeedViewCell.swift */; };
+		884541D024121CBF00C47821 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884541CF24121CBF00C47821 /* Photo.swift */; };
+		884541D224121E4000C47821 /* DataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884541D124121E4000C47821 /* DataBaseService.swift */; };
+		884541D42412219A00C47821 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884541D32412219A00C47821 /* StorageService.swift */; };
 		8847F06524119B8F00A23983 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847F06424119B8F00A23983 /* AppDelegate.swift */; };
 		8847F06724119B8F00A23983 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847F06624119B8F00A23983 /* SceneDelegate.swift */; };
 		8847F06E24119B9100A23983 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8847F06D24119B9100A23983 /* Assets.xcassets */; };
@@ -33,6 +36,9 @@
 		884541C524120BFE00C47821 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		884541C72412107B00C47821 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		884541CD24121B2700C47821 /* FeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewCell.swift; sourceTree = "<group>"; };
+		884541CF24121CBF00C47821 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		884541D124121E4000C47821 /* DataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseService.swift; sourceTree = "<group>"; };
+		884541D32412219A00C47821 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		8847F06124119B8E00A23983 /* instagramProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagramProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8847F06424119B8F00A23983 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8847F06624119B8F00A23983 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				884541C524120BFE00C47821 /* AuthenticationService.swift */,
+				884541D124121E4000C47821 /* DataBaseService.swift */,
+				884541D32412219A00C47821 /* StorageService.swift */,
 			);
 			path = FireBaseServices;
 			sourceTree = "<group>";
@@ -84,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				884541CD24121B2700C47821 /* FeedViewCell.swift */,
+				884541CF24121CBF00C47821 /* Photo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -285,10 +294,13 @@
 				8847F06524119B8F00A23983 /* AppDelegate.swift in Sources */,
 				8847F07B24119E0E00A23983 /* PhotoCollectionViewController.swift in Sources */,
 				8847F07924119DFD00A23983 /* FeedViewController.swift in Sources */,
+				884541D224121E4000C47821 /* DataBaseService.swift in Sources */,
 				8847F08B2411A4D800A23983 /* Extensions.swift in Sources */,
 				8847F0872411A22F00A23983 /* AddPhotoView.swift in Sources */,
 				8847F0832411A1E800A23983 /* LoginView.swift in Sources */,
+				884541D024121CBF00C47821 /* Photo.swift in Sources */,
 				884541C82412107B00C47821 /* MainTabBarController.swift in Sources */,
+				884541D42412219A00C47821 /* StorageService.swift in Sources */,
 				8847F0892411A24000A23983 /* ProfileView.swift in Sources */,
 				884541C624120BFE00C47821 /* AuthenticationService.swift in Sources */,
 				884541CE24121B2700C47821 /* FeedViewCell.swift in Sources */,
