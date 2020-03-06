@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = LoginViewController()
+        window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
         window?.makeKeyAndVisible()
     }
 
@@ -50,7 +50,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
      private func createMainTabBarController() -> UITabBarController {
-           let firstvc = FeedViewController(),secondvc = AddPhotoViewController(),thirdvc  = ProfileViewController()
+           let firstvc = FeedViewController(),secondvc = PhotoCollectionViewController(),thirdvc  = ProfileViewController()
            firstvc.tabBarItem = UITabBarItem(title: "Feed", image: UIImage(systemName: "eye"), tag: 0)
            secondvc.tabBarItem = UITabBarItem(title: "Create", image: UIImage(systemName: "plus.bubble"), tag: 1)
            thirdvc.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.circle"), tag: 2)

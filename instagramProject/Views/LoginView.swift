@@ -52,7 +52,7 @@ class LoginView: UIView {
            return image
        }()
     
-    private lazy var errorLabel: UILabel = {
+    public lazy var errorLabel: UILabel = {
            let label = UILabel()
            label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
            label.textColor = .red
@@ -80,7 +80,7 @@ class LoginView: UIView {
         return button
     }()
     
-    private lazy var loginLabel: UILabel = {
+    public lazy var loginLabel: UILabel = {
            let label = UILabel()
            label.text = "If you have an Account --> "
            label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
@@ -100,6 +100,7 @@ class LoginView: UIView {
         button.backgroundColor = .clear
         button.layer.borderColor = UIColor.clear.cgColor
         button.layer.borderWidth = 1.5
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
         button.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 17)
         return button
     }()
