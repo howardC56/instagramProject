@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,7 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
+        if let _ = Auth.auth().currentUser {
+            window?.rootViewController = MainTabBarController()
+        } else {
+            window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
+        }
         window?.makeKeyAndVisible()
     }
 
@@ -49,15 +54,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
     
-     private func createMainTabBarController() -> UITabBarController {
-           let firstvc = FeedViewController(),secondvc = PhotoCollectionViewController(),thirdvc  = ProfileViewController()
-           firstvc.tabBarItem = UITabBarItem(title: "Feed", image: UIImage(systemName: "eye"), tag: 0)
-           secondvc.tabBarItem = UITabBarItem(title: "Create", image: UIImage(systemName: "plus.bubble"), tag: 1)
-           thirdvc.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.circle"), tag: 2)
-           let tabVC = UITabBarController()
-           tabVC.setViewControllers([firstvc,UINavigationController(rootViewController: secondvc),thirdvc], animated: false)
-           return tabVC
-       }
+    
 
 }
 

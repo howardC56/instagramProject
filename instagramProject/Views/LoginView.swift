@@ -70,7 +70,7 @@ class LoginView: UIView {
         button.tintColor = .black
         button.backgroundColor = .green
         button.layer.shadowColor = UIColor.darkGray.cgColor
-        button.layer.shadowPath = UIBezierPath(rect: button.bounds).cgPath
+        button.layer.shadowPath = UIBezierPath(roundedRect: button.bounds, cornerRadius: 15).cgPath
         button.layer.shadowOffset = .zero
         button.layer.shadowOpacity = 0.5
         button.layer.shadowRadius = 5
@@ -123,7 +123,6 @@ class LoginView: UIView {
         signUpButtonConstraint()
         loginLabelConstraints()
         accountStateButtonConstraints()
-        signUpButton.layer.shadowPath = UIBezierPath(roundedRect: signUpButton.bounds, cornerRadius: 15).cgPath
     }
     
     private func profileImageConstraint() {

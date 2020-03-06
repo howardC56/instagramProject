@@ -11,8 +11,6 @@
 		884541C82412107B00C47821 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884541C72412107B00C47821 /* MainTabBarController.swift */; };
 		8847F06524119B8F00A23983 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847F06424119B8F00A23983 /* AppDelegate.swift */; };
 		8847F06724119B8F00A23983 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847F06624119B8F00A23983 /* SceneDelegate.swift */; };
-		8847F06924119B8F00A23983 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847F06824119B8F00A23983 /* ViewController.swift */; };
-		8847F06C24119B8F00A23983 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8847F06A24119B8F00A23983 /* Main.storyboard */; };
 		8847F06E24119B9100A23983 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8847F06D24119B9100A23983 /* Assets.xcassets */; };
 		8847F07124119B9100A23983 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8847F06F24119B9100A23983 /* LaunchScreen.storyboard */; };
 		8847F07924119DFD00A23983 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847F07824119DFD00A23983 /* FeedViewController.swift */; };
@@ -36,8 +34,6 @@
 		8847F06124119B8E00A23983 /* instagramProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagramProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8847F06424119B8F00A23983 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8847F06624119B8F00A23983 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8847F06824119B8F00A23983 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8847F06B24119B8F00A23983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8847F06D24119B9100A23983 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8847F07024119B9100A23983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8847F07224119B9100A23983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,6 +70,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		884541C9241219A100C47821 /* FireBaseServices */ = {
+			isa = PBXGroup;
+			children = (
+				884541C524120BFE00C47821 /* AuthenticationService.swift */,
+			);
+			path = FireBaseServices;
+			sourceTree = "<group>";
+		};
+		884541CA241219B200C47821 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		884541CC241219C900C47821 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8847F08A2411A4D800A23983 /* Extensions.swift */,
+				8847F06424119B8F00A23983 /* AppDelegate.swift */,
+				8847F06624119B8F00A23983 /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		8847F05824119B8E00A23983 = {
 			isa = PBXGroup;
 			children = (
@@ -95,14 +116,11 @@
 		8847F06324119B8E00A23983 /* instagramProject */ = {
 			isa = PBXGroup;
 			children = (
+				884541CC241219C900C47821 /* SupportingFiles */,
+				884541CA241219B200C47821 /* Models */,
+				884541C9241219A100C47821 /* FireBaseServices */,
 				8847F0812411A1D900A23983 /* Views */,
-				8847F06424119B8F00A23983 /* AppDelegate.swift */,
-				884541C524120BFE00C47821 /* AuthenticationService.swift */,
-				8847F06624119B8F00A23983 /* SceneDelegate.swift */,
 				8847F0802411A1C600A23983 /* ViewControllers */,
-				8847F06824119B8F00A23983 /* ViewController.swift */,
-				8847F08A2411A4D800A23983 /* Extensions.swift */,
-				8847F06A24119B8F00A23983 /* Main.storyboard */,
 				8847F06D24119B9100A23983 /* Assets.xcassets */,
 				8847F06F24119B9100A23983 /* LaunchScreen.storyboard */,
 				8847F08C241202E200A23983 /* GoogleService-Info.plist */,
@@ -206,7 +224,6 @@
 				8847F07124119B9100A23983 /* LaunchScreen.storyboard in Resources */,
 				8847F08D241202E200A23983 /* GoogleService-Info.plist in Resources */,
 				8847F06E24119B9100A23983 /* Assets.xcassets in Resources */,
-				8847F06C24119B8F00A23983 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +279,6 @@
 				8847F07F2411A1AD00A23983 /* LoginViewController.swift in Sources */,
 				8847F0852411A20F00A23983 /* FeedView.swift in Sources */,
 				8847F07D24119E1700A23983 /* ProfileViewController.swift in Sources */,
-				8847F06924119B8F00A23983 /* ViewController.swift in Sources */,
 				8847F06524119B8F00A23983 /* AppDelegate.swift in Sources */,
 				8847F07B24119E0E00A23983 /* PhotoCollectionViewController.swift in Sources */,
 				8847F07924119DFD00A23983 /* FeedViewController.swift in Sources */,
@@ -279,14 +295,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8847F06A24119B8F00A23983 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8847F06B24119B8F00A23983 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8847F06F24119B9100A23983 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -427,7 +435,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.howardchang.login.instagramProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -446,7 +454,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.howardchang.login.instagramProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
