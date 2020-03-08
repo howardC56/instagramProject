@@ -49,7 +49,7 @@ class FeedViewCell: UITableViewCell {
     
     public func configureCell(for photo: Photo) {
       titleLabel.text = photo.photoTitle
-        photoDescriptionLabel.text = photo.postedDate.description
+        photoDescriptionLabel.text = "\(photo.postedDate.description) \n by: \(photo.posterName)"
       instaImageView.kf.setImage(with: URL(string: photo.imageURL))
     }
     

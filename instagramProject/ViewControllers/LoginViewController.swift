@@ -76,7 +76,8 @@ class LoginViewController: UIViewController {
     }
     
     private func navigateToMainView() {
-        navigationController?.pushViewController(MainTabBarController(), animated: true)
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let sceneDelegate = windowScene.delegate as? SceneDelegate, let window = sceneDelegate.window else { return }
+        window.rootViewController = MainTabBarController()
      }
      
      private func clearErrorLabel() {

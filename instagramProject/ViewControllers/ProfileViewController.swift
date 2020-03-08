@@ -55,7 +55,11 @@ class ProfileViewController: UIViewController {
     @objc func signoutPressed(_ sender: UIButton) {
     do {
               try Auth.auth().signOut()
-        navigationController?.pushViewController(LoginViewController(), animated: true)
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+            let sceneDelegate = windowScene.delegate as? SceneDelegate, let window = sceneDelegate.window else { return }
+        window.rootViewController = LoginViewController()
+//        navigationController?.pushViewController(LoginViewController(), animated: true)
+//        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
           } catch {
               DispatchQueue.main.async {
                   self.showAlert(title: "Error signing out", message: "\(error.localizedDescription)")
