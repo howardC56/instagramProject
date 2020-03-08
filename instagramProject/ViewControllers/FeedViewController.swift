@@ -66,6 +66,12 @@ class FeedViewController: UIViewController {
         cell.configureCell(for: photo)
         return cell
       }
+        
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let selected = photos[indexPath.row]
+            let vc = DetailsViewController(photo: selected)
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
 
