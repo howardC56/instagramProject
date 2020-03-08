@@ -33,7 +33,7 @@ class PhotoCollectionViewController: UIViewController {
            }()
     
     @objc func createPhoto(_ sender: UIBarButtonItem) {
-        
+        navigationController?.pushViewController(CreatePostViewController(), animated: true)
     }
     
     override func viewDidLoad() {
