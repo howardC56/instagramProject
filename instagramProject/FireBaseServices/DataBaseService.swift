@@ -16,7 +16,7 @@ class DatabaseService {
   
   private let db = Firestore.firestore()
   
-  public func createItem(photoTitle: String, photoDescription: String, posterName: String, completion: @escaping (Result<String, Error>) -> ()) {
+    public func createItem(photoTitle: String, photoDescription: String, posterName: String, completion: @escaping (Result<String, Error>) -> ()) {
     guard let user = Auth.auth().currentUser else { return }
     
     let documentRef = db.collection(DatabaseService.photoCollection).document()

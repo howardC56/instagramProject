@@ -13,9 +13,10 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     public lazy var photoImage: UIImageView = {
         let image = UIImageView()
                  image.clipsToBounds = true
-                 image.contentMode = .scaleAspectFit
+                 image.contentMode = .scaleAspectFill
                  image.image = UIImage(systemName: "person")
-                 image.layer.cornerRadius = 15
+        image.layer.borderWidth = 0.5
+        image.layer.borderColor = UIColor.black.cgColor
                  return image
     }()
     

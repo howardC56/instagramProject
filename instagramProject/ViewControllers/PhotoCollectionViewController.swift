@@ -54,7 +54,7 @@ class PhotoCollectionViewController: UIViewController {
           }
         } else if let snapshot = snapshot {
           let allPhoto = snapshot.documents.map { Photo($0.data()) }
-            self?.photos = allPhoto.filter { $0.posterId == Auth.auth().currentUser?.email}
+            self?.photos = allPhoto.filter { $0.posterId == Auth.auth().currentUser?.uid}
         }
       })
     }
