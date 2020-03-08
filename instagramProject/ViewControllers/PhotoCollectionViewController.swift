@@ -80,4 +80,10 @@ extension PhotoCollectionViewController: UICollectionViewDataSource, UICollectio
     cell.configureCell(photo)
     return cell
   }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selected = photos[indexPath.row]
+        let vc = DetailsViewController(photo: selected)
+        present(vc, animated: true, completion: nil)
+    }
 }

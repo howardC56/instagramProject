@@ -34,6 +34,7 @@ class ProfileViewController: UIViewController {
      
      override func viewDidLoad() {
        super.viewDidLoad()
+        title = "Profile"
         profileView.userNameTextField.delegate = self
        updateUI()
         profileView.photoButton.addTarget(self, action: #selector(profilePhotoButtonPressed(_:)), for: .touchUpInside)
