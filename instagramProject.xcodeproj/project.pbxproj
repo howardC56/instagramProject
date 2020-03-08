@@ -23,7 +23,7 @@
 		8847F07F2411A1AD00A23983 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847F07E2411A1AD00A23983 /* LoginViewController.swift */; };
 		8847F0832411A1E800A23983 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847F0822411A1E800A23983 /* LoginView.swift */; };
 		8847F0852411A20F00A23983 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847F0842411A20F00A23983 /* FeedView.swift */; };
-		8847F0872411A22F00A23983 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847F0862411A22F00A23983 /* AddPhotoView.swift */; };
+		8847F0872411A22F00A23983 /* PhotoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847F0862411A22F00A23983 /* PhotoCollectionView.swift */; };
 		8847F0892411A24000A23983 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847F0882411A24000A23983 /* ProfileView.swift */; };
 		8847F08B2411A4D800A23983 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847F08A2411A4D800A23983 /* Extensions.swift */; };
 		8847F08D241202E200A23983 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8847F08C241202E200A23983 /* GoogleService-Info.plist */; };
@@ -51,7 +51,7 @@
 		8847F07E2411A1AD00A23983 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8847F0822411A1E800A23983 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8847F0842411A20F00A23983 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
-		8847F0862411A22F00A23983 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
+		8847F0862411A22F00A23983 /* PhotoCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionView.swift; sourceTree = "<group>"; };
 		8847F0882411A24000A23983 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8847F08A2411A4D800A23983 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8847F08C241202E200A23983 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				8847F0822411A1E800A23983 /* LoginView.swift */,
-				8847F0862411A22F00A23983 /* AddPhotoView.swift */,
+				8847F0862411A22F00A23983 /* PhotoCollectionView.swift */,
 				8847F0882411A24000A23983 /* ProfileView.swift */,
 				8847F0842411A20F00A23983 /* FeedView.swift */,
 			);
@@ -296,7 +296,7 @@
 				8847F07924119DFD00A23983 /* FeedViewController.swift in Sources */,
 				884541D224121E4000C47821 /* DataBaseService.swift in Sources */,
 				8847F08B2411A4D800A23983 /* Extensions.swift in Sources */,
-				8847F0872411A22F00A23983 /* AddPhotoView.swift in Sources */,
+				8847F0872411A22F00A23983 /* PhotoCollectionView.swift in Sources */,
 				8847F0832411A1E800A23983 /* LoginView.swift in Sources */,
 				884541D024121CBF00C47821 /* Photo.swift in Sources */,
 				884541C82412107B00C47821 /* MainTabBarController.swift in Sources */,

@@ -32,7 +32,7 @@ class MainTabBarController: UITabBarController {
         
         
         private lazy var thirdVC: UIViewController = {
-           let vc = ProfileViewController()
+           let vc = UINavigationController(rootViewController: ProfileViewController())
            vc.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.circle"), tag: 2)
            return vc
         }()

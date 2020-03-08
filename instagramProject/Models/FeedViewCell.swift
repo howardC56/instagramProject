@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FeedViewCell: UITableViewCell {
 
@@ -45,6 +46,13 @@ class FeedViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    public func configureCell(for photo: Photo) {
+      titleLabel.text = photo.photoTitle
+        photoDescriptionLabel.text = photo.postedDate.description
+      instaImageView.kf.setImage(with: URL(string: photo.imageURL))
+    }
+    
     private func commonInit() {
         backgroundColor = .systemBackground
         instaImageViewConstraints()

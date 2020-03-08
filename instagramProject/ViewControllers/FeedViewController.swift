@@ -21,7 +21,7 @@ class FeedViewController: UIViewController {
         }
       }
     }
-    
+
     override func loadView() {
         view = tableView
     }
@@ -49,7 +49,7 @@ class FeedViewController: UIViewController {
       
       override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        listener?.remove() // no longer are we listening for changes from Firebase
+        listener?.remove() 
       }
     }
 
@@ -63,7 +63,7 @@ class FeedViewController: UIViewController {
           fatalError("could not downcast to FeedViewCell")
         }
         let photo = photos[indexPath.row]
-        //cell.configureCell(for: photo)
+        cell.configureCell(for: photo)
         return cell
       }
     }

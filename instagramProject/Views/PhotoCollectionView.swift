@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPhotoView: UIView {
+class PhotoCollectionView: UIView {
 
     public lazy var collectionview: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -37,7 +37,12 @@ class AddPhotoView: UIView {
     }
     
     private func commonInit() {
-        
+        collectionConstraints()
     }
 
+    private func collectionConstraints() {
+    addSubview(collectionview)
+        collectionview.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor)
+    }
+    
 }
